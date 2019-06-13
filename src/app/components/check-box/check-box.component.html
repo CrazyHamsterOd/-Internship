@@ -1,0 +1,4 @@
+<input
+  type="checkbox"
+  [(ngModel)]="checked"
+  (change)="this.checkboxChange.emit($event.target.checked)">

@@ -1,0 +1,15 @@
+<app-check-box [checked]="todo.done" (checkboxChange)="complete()"></app-check-box>
+
+<ng-container *ngIf="editMode; else viewTemplate">
+  <app-input [(value)]="todo.value"></app-input>
+  <app-text-button text="Save" (click)="changeMode()"></app-text-button>
+</ng-container>
+
+<ng-template #viewTemplate>
+  <span appLineThrough [done]="todo.done">{{todo.value}}</span>
+  <app-icon-button class="edit" (click)="changeMode()"></app-icon-button>
+</ng-template>
+
+<app-icon-button class="trash" (click)="deleteTodo.emit(todo.id)"></app-icon-button>
+
+

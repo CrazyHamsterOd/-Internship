@@ -1,0 +1,15 @@
+:host{
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  background-size: contain;
+  cursor: pointer;
+}
+
+:host-context(.edit){
+  background-image: url('../../../assets/icons/edit.png');
+}
+
+:host-context(.trash){
+  background-image: url('../../../assets/icons/trash.png');
+}

@@ -1,0 +1,11 @@
+<ng-container
+  *ngFor="let item of items"
+  [ngTemplateOutlet]="template || defaultTemplate"
+  [ngTemplateOutletContext]="{item: item}"
+>
+
+</ng-container>
+
+<ng-template #defaultTemplate>
+  Template is not founded!
+</ng-template>
